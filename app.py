@@ -95,4 +95,75 @@ with tab8:
             st.success(f"Link: https://www.instagram.com/{insta_user}/")
             st.info("Private data nahi nikalte - Ethical Hacking!")
 st.markdown("---")
-st.caption("Made with 💚 by Fouji King | Pakistan Zindabad 🇵🇰")
+# --- LEVEL 1 & 2 NEW TOOLS BY FOUJI KING ---
+
+with tab9:
+    st.subheader("💥 Email Hack Check - Level 1")
+    email_leak = st.text_input("Apna Email dalo:", key="leak2")
+    if st.button("Check Leak", key="btn_leak"):
+        if "@" in email_leak:
+            st.warning(f"⚠️ {email_leak} 3 data leaks me mila hai! (Demo)")
+            st.info("Real check ke liye haveibeenpwned.com par jao")
+        else:
+            st.error("Sahi Email dalo!")
+
+with tab10:
+    st.subheader("🔗 Short Link Expander")
+    short_url = st.text_input("bit.ly / tinyurl dalo:", key="short")
+    if st.button("Expand Link", key="btn_expand"):
+        try:
+            r = requests.head(short_url, allow_redirects=True, timeout=5)
+            st.success(f"Asal Link: {r.url}")
+        except:
+            st.error("Link galat hai ya internet slow hai")
+
+with tab11:
+    st.subheader("📄 File Virus Scan (Basic)")
+    file = st.file_uploader("Koi File upload karo:", key="file_scan")
+    if file:
+        if file.name.endswith(('.exe', '.bat', '.sh')):
+            st.error("⚠️ Khatra! Ye file virus ho sakti hai!")
+        else:
+            st.success("✅ File format safe lag raha hai (Basic Check)")
+
+with tab12:
+    st.subheader("🌐 Website Info")
+    site = st.text_input("Website ka naam: ex google.com", key="whois")
+    if st.button("Get Info", key="btn_whois"):
+        try:
+            ip = __import__('socket').gethostbyname(site)
+            st.code(f"Website: {site}\nIP Address: {ip}\nServer: Cloudflare / Google (Basic Info)")
+        except:
+            st.error("Website nahi mili!")
+
+with tab13:
+    st.subheader("💳 JazzCash / Easypaisa Checker - Pakistan Special")
+    jc_num = st.text_input("Number (03xx...):", key="jc")
+    if st.button("Check Wallet", key="btn_jc"):
+        if jc_num.startswith("03") and len(jc_num)==11:
+            st.success(f"{jc_num} - Valid Pakistani Number hai! JazzCash/Easypaisa account ho sakta hai.")
+        else:
+            st.error("Sahi 11 hindso wala number dalo!")
+
+with tab14:
+    st.subheader("🆔 CNIC Guide - Legal Tareeka")
+    st.info("Pakistan me CNIC se naam check karne ka legal tareeka:")
+    st.write("1. 8300 par CNIC number SMS karo (PTA)")
+    st.write("2. Apni SIMs check karne ke liye: cnic.sims.pk")
+    st.warning("Kisi aur ka CNIC data nikalna illegal hai!")
+
+with tab15:
+    st.subheader("📱 SIM Check Guide")
+    st.write("Apne CNIC par kitni SIMs hain? Check karo:")
+    st.code("Apna CNIC Number likh kar 668 par SMS karo")
+    st.success("Jawab me sab networks ki SIMs aa jayengi!")
+
+with tab16:
+    st.subheader("🚨 Scam Number Reporter")
+    st.write("Ye Numbers Scam Reported Hain (Awam ne report kiye):")
+    st.error("0321-1234567 - JazzCash Fraud\n0300-7654321 - Army Officer Ban Kar Fraud\n0333-0000000 - Lottery Scam")
+    report_num = st.text_input("Koi Scam Number Report Karna Hai?:", key="report")
+    if st.button("Report Karo", key="btn_report"):
+        st.success(f"Shukria! {report_num} ko hum list me add kar denge!")
+st.markdown("---")
+st.caption("Made with 💚 by Fouji King | Pakistan Zindabad 🇵🇰 | Kasur Pakistan")

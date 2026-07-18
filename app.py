@@ -79,5 +79,21 @@ with tab6:
         except:
             st.error("Error! IP check fail")
 
+with tab7:
+    st.subheader("💬 WhatsApp Safe")
+    wa_input = st.text_input("WhatsApp Link / Number:", key="wa")
+    if st.button("Check WhatsApp", key="btn_wa"):
+        if "bit.ly" in wa_input or "tinyurl" in wa_input:
+            st.error("⚠️ Khatra! Scam link ho sakta hai!")
+        else:
+            st.success("✅ Format sahi hai!")
+
+with tab8:
+    st.subheader("📸 Insta Info")
+    insta_user = st.text_input("Insta Username:", key="insta2")
+    if st.button("Insta Check", key="btn_insta2"):
+        if insta_user:
+            st.success(f"Link: https://www.instagram.com/{insta_user}/")
+            st.info("Private data nahi nikalte - Ethical Hacking!")
 st.markdown("---")
 st.caption("Made with 💚 by Fouji King | Pakistan Zindabad 🇵🇰")

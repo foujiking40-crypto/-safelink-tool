@@ -16,8 +16,7 @@ st.image("logo (1).png", width=250)
 st.title("🛡️ SafeLink ULTRA PRO")
 st.markdown("---")
 
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔗 URL", "🔑 Pass", "📧 Email", "🔒 Hash", "📱 QR", "🌍 IP"])
-
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["🔗 URL", "🔑 Password", "📧 Email", "🔒 Hash", "📱 QR", "🌍 IP", "💬 WhatsApp Safe", "📸 Insta Info"])
 with tab1:
     st.subheader("URL Checker")
     url = st.text_input("URL daalo:", key="u1")

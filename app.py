@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 import hashlib
 import qrcode
@@ -9,6 +7,16 @@ import socket
 import re
 
 st.set_page_config(page_title="SafeLink ULTRA PRO MAX", page_icon="logo.png", layout="wide")
+
+# Dark Mode Toggle
+dark_mode = st.toggle("🌙 Dark Mode On Karo")
+
+if dark_mode:
+    st.markdown("""
+    <style>
+    .stApp { background-color: #0E1117; color: white; }
+    </style>
+    """, unsafe_allow_html=True)
 
 st.image("logo.png", width=250)
 st.caption("Made with love by Fouji King | Pakistan Zindabad | 16-in-1 MEGA PRO")

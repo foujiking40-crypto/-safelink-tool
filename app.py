@@ -1,3 +1,5 @@
+
+
 import streamlit as st
 import hashlib
 import qrcode
@@ -8,8 +10,8 @@ import re
 
 st.set_page_config(page_title="SafeLink ULTRA PRO MAX", page_icon="logo.png", layout="wide")
 
-st.title("🛡️ SafeLink ULTRA PRO MAX")
-st.caption("Made with 💚 by Foujiking 
+st.image("logo.png", width=250)
+st.caption("Made with love by Fouji King | Pakistan Zindabad | 16-in-1 MEGA PRO")
 
 # 16 Tabs
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(["🔗 URL", "🔑 Password", "📧 Email", "🔒 Hash", "📱 QR", "🌍 IP", "💬 WhatsApp", "📸 Insta", "💥 Email Leak", "🔗 Link Expand", "📄 File Scan", "🌐 Website Info", "💳 JC/Easypaisa", "🆔 CNIC Guide", "📱 SIM Check", "🚨 Scam Report"])

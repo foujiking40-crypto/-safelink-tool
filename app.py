@@ -12,8 +12,8 @@ h1, h2, h3 { color: #00FF88 !important; font-family: monospace; }
 </style>
 """, unsafe_allow_html=True)
 
+st.image("logo (1).png", width=250)
 st.title("🛡️ SafeLink ULTRA PRO")
-st.markdown("**by Fouji King 🇵🇰 | 6-in-1 Ethical Toolkit**")
 st.markdown("---")
 
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔗 URL", "🔑 Pass", "📧 Email", "🔒 Hash", "📱 QR", "🌍 IP"])
